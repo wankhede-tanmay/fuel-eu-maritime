@@ -4,15 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:init": "ts-node src/infrastructure/db/scripts/initializeDb.ts",
+    "dev": "ts-node src/infrastructure/server/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
     "@types/node": "^25.6.0",
+    "@types/pg": "^8.20.0",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
   }
 }
